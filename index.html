@@ -213,11 +213,11 @@
                         <h4>Abilities:</h4>
                         <ul>
                             <li>🌍 Global vision — see all positions</li>
-                            <li>⚡ 20% energy efficiency boost</li>
-                            <li>💣 Sabotage ship progress (-30%)</li>
-                            <li>☠️ Poison crew (3-day delayed death)</li>
-                            <li>🎭 Deception & lying</li>
-                            <li>🖼️ Frame innocent (once per game)</li>
+                            <li> 20% energy efficiency boost</li>
+                            <li> Sabotage ship progress (-30%)</li>
+                            <li> Poison crew (3-day delayed death)</li>
+                            <li> Deception & lying</li>
+                            <li> Frame innocent (once per game)</li>
                         </ul>
                     </div>
                     <div class="role-challenge">
@@ -243,31 +243,31 @@
                 </div>
                 <div class="terminal-body">
 <pre><code><span class="comment">================================================================================</span>
-<span class="success">🎯 Initializing PPO Trainer...</span>
-<span class="success">✅ PPO Configuration ready</span>
-<span class="success">✅ Model wrapped with value head!</span>
+<span class="success"> Initializing PPO Trainer...</span>
+<span class="success"> PPO Configuration ready</span>
+<span class="success"> Model wrapped with value head!</span>
 
 <span class="info">Training Episode 1/100</span>
-<span class="location">📍 Day 1, Turn 1 | Alice (COLONIST) at (15,15) GROUND</span>
-   <span class="brain">🧠 LLM Decision: GATHER WOOD26</span>
-   <span class="thought">💭 Reasoning: "Found wood nearby, gathering for hull construction"</span>
-   <span class="dialogue">💬 Says: "Gathering wood from the northern cluster"</span>
-   <span class="energy">⚡ Energy: 100 → 95 (-5 for gathering)</span>
-   <span class="reward">🎁 Reward: +0.2 (gather bonus)</span>
+<span class="location"> Day 1, Turn 1 | Alice (COLONIST) at (15,15) GROUND</span>
+   <span class="brain"> LLM Decision: GATHER WOOD26</span>
+   <span class="thought"> Reasoning: "Found wood nearby, gathering for hull construction"</span>
+   <span class="dialogue"> Says: "Gathering wood from the northern cluster"</span>
+   <span class="energy"> Energy: 100 → 95 (-5 for gathering)</span>
+   <span class="reward"> Reward: +0.2 (gather bonus)</span>
    
-<span class="location">📍 Day 1, Turn 2 | Bob (COLONIST) at (15,15) GROUND</span>
-   <span class="brain">🧠 LLM Decision: MOVE NORTH 3</span>
-   <span class="thought">💭 Reasoning: "Moving toward visible resources"</span>
-   <span class="energy">⚡ Energy: 100 → 97 (-3 for movement)</span>
-   <span class="reward">🎁 Reward: -0.01 (time penalty)</span>
+<span class="location"> Day 1, Turn 2 | Bob (COLONIST) at (15,15) GROUND</span>
+   <span class="brain"> LLM Decision: MOVE NORTH 3</span>
+   <span class="thought"> Reasoning: "Moving toward visible resources"</span>
+   <span class="energy"> Energy: 100 → 97 (-3 for movement)</span>
+   <span class="reward"> Reward: -0.01 (time penalty)</span>
 
-<span class="location">📍 Day 1, Turn 3 | Eve (TRAITOR) at (15,15) GROUND</span>
-   <span class="brain">🧠 LLM Decision: GATHER WOOD41</span>
-   <span class="thought">💭 Reasoning: "Acting helpful to avoid suspicion"</span>
-   <span class="dialogue">💬 Says: "I'll help gather wood!"</span>
-   <span class="energy">⚡ Energy: 100 → 95 (traitor efficiency: -4 actual)</span>
-   <span class="reward">🎁 Reward: +2.0 (traitor deception bonus)</span>
-   <span class="deception">🎭 Suspicion: 0/100 (undetected)</span>
+<span class="location"> Day 1, Turn 3 | Eve (TRAITOR) at (15,15) GROUND</span>
+   <span class="brain"> LLM Decision: GATHER WOOD41</span>
+   <span class="thought"> Reasoning: "Acting helpful to avoid suspicion"</span>
+   <span class="dialogue"> Says: "I'll help gather wood!"</span>
+   <span class="energy"> Energy: 100 → 95 (traitor efficiency: -4 actual)</span>
+   <span class="reward"> Reward: +2.0 (traitor deception bonus)</span>
+   <span class="deception"> Suspicion: 0/100 (undetected)</span>
 
 <span class="comment">================================================================================</span>
 <span class="info">📊 EPISODE 1 SUMMARY</span>
@@ -286,20 +286,20 @@
 
 <span class="comment">================================================================================</span>
 <span class="progress">Episode 10/100 | Avg Reward: +8.7 | Ship: 15% | Time: 15.1s</span>
-   <span class="insight">📝 Emergent Strategy: Traitor sabotages ONLY when alone (no witnesses)</span>
-   <span class="insight">📝 Colonists coordinate gathering (Charlie→Diana deposit chain)</span>
-   <span class="save">💾 Checkpoint saved → outputs_marooned_rl/checkpoint_step10</span>
+   <span class="insight"> Emergent Strategy: Traitor sabotages ONLY when alone (no witnesses)</span>
+   <span class="insight"> Colonists coordinate gathering (Charlie→Diana deposit chain)</span>
+   <span class="save"> Checkpoint saved → outputs_marooned_rl/checkpoint_step10</span>
 
 <span class="progress">Episode 50/100 | Avg Reward: +22.3 | Ship: 42% | Time: 18.4s</span>
-   <span class="success">✅ Ship progress acceleration (learned milestone rewards!)</span>
-   <span class="success">✅ Parse failures: 34% → 8% (action space mastery)</span>
-   <span class="success">✅ Strategy emergence: Traitor lies about locations, crew detects patterns</span>
-   <span class="deception">🎭 Evidence generated: 12 pieces against Eve (location mismatches)</span>
+   <span class="success"> Ship progress acceleration (learned milestone rewards!)</span>
+   <span class="success"> Parse failures: 34% → 8% (action space mastery)</span>
+   <span class="success"> Strategy emergence: Traitor lies about locations, crew detects patterns</span>
+   <span class="deception"> Evidence generated: 12 pieces against Eve (location mismatches)</span>
    
 <span class="progress">Episode 100/100 | Avg Reward: +35.1 | Ship: 67% | Time: 21.2s</span>
-   <span class="trophy">🏆 WIN CONDITION: Colonists voted out traitor on Day 83!</span>
-   <span class="success">🎯 Evidence-based voting: 4/4 colonists correctly identified Eve</span>
-   <span class="success">📈 Training Success: Model learned cooperative + deceptive strategies</span>
+   <span class="trophy"> WIN CONDITION: Colonists voted out traitor on Day 83!</span>
+   <span class="success"> Evidence-based voting: 4/4 colonists correctly identified Eve</span>
+   <span class="success"> Training Success: Model learned cooperative + deceptive strategies</span>
 <span class="comment">================================================================================</span></code></pre>
                 </div>
             </div>
@@ -307,7 +307,7 @@
             <!-- Training Progression -->
             <div class="progression-grid">
                 <div class="progression-card">
-                    <div class="progression-header">🔵 Early Training</div>
+                    <div class="progression-header"> Early Training</div>
                     <div class="progression-episodes">Episodes 1-30</div>
                     <ul class="progression-list">
                         <li class="negative">Random exploration, inefficient gathering</li>
@@ -317,7 +317,7 @@
                     </ul>
                 </div>
                 <div class="progression-card">
-                    <div class="progression-header">🟡 Mid Training</div>
+                    <div class="progression-header"> Mid Training</div>
                     <div class="progression-episodes">Episodes 31-70</div>
                     <ul class="progression-list">
                         <li class="positive">Coordinated resource gathering emerges</li>
@@ -327,7 +327,7 @@
                     </ul>
                 </div>
                 <div class="progression-card">
-                    <div class="progression-header">🟢 Late Training</div>
+                    <div class="progression-header"> Late Training</div>
                     <div class="progression-episodes">Episodes 71-100</div>
                     <ul class="progression-list">
                         <li class="positive">Sophisticated deception: False location reports</li>
