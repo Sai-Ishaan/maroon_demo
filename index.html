@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAROONED - Where Trust Dies, Survival Begins</title>
+    <meta name="description" content="A Multi-Agent Deception Environment for Reinforcement Learning Research">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">Multi-Agent Deception Environment</div>
+            <h1 class="hero-title">
+                <span class="gradient-text">MAROONED</span>
+            </h1>
+            <p class="hero-subtitle">Where Trust Dies, Survival Begins</p>
+            <p class="hero-tagline">
+                "Pirates of the Caribbean meets Alice in Borderland meets Among Us"
+            </p>
+            
+            <div class="hero-badges">
+                <span class="badge">Python 3.9+</span>
+                <span class="badge">RL Environment</span>
+                <span class="badge">MIT License</span>
+                <span class="badge">Research</span>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#training" class="btn btn-primary">See Training Output</a>
+                <a href="https://github.com/yourusername/marooned" class="btn btn-secondary" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10,000</div>
+                    <div class="stat-label">Steps per Episode</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">~875</div>
+                    <div class="stat-label">Token Observations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Action Types</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Map Levels</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1,350+</div>
+                    <div class="stat-label">Tile States</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premise Section -->
+    <section class="premise-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🌊 The Premise</span>
+                <h2>Five sailors. One traitor. 100 days to escape.</h2>
+            </div>
+            <div class="premise-content">
+                <p class="lead">Your ship is destroyed. The island is hostile. Resources are scarce. One among you seeks your doom.</p>
+                <p class="lead highlight">Can your AI agents survive the ultimate test of cooperation, deception, and strategy?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">What Makes MAROONED Special?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>Emergent Deception</h3>
+                    <p>Unlike scripted games, deception emerges from learned behavior. The traitor isn't programmed to lie — it learns that lying helps it win.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏳</div>
+                    <h3>Extreme Episode Length</h3>
+                    <p>10× longer than typical language-based RL tasks. Tests credit assignment over horizons that break traditional RL algorithms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3>Information Asymmetry</h3>
+                    <p>Colonists see 5-tile radius and symptoms. Traitor has global vision and knows exact poison states.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Natural Language Everything</h3>
+                    <p>Observations, actions, and reasoning — all in human-readable text. No abstract vectors. Pure language-grounded RL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Levels -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">The Island</h2>
+            <p class="section-subtitle">Three interconnected levels of strategic exploration</p>
+            <div class="map-grid">
+                <div class="map-card">
+                    <div class="map-header">
+                        <span class="map-icon">🏝️</span>
+                        <h3>GROUND</h3>
+                        <span class="map-size">30×30</span>
+                    </div>
+                    <ul class="map-features">
+                        <li>Base camp at (15,15)</li>
+                        <li>Wood, berries, apples</li>
+                        <li>Ship construction site</li>
+                        <li>Stairs to other levels</li>
+                        <li>Poison tablets scattered</li>
+                    </ul>
+                </div>
+                <div class="map-card">
+                    <div class="map-header">
+                        <span class="map-icon">⛰️</span>
+                        <h3>MOUNTAIN</h3>
+                        <span class="map-size">10×10</span>
+                    </div>
+                    <ul class="map-features">
+                        <li>Antidote herbs (rare!)</li>
+                        <li>Special metal deposits</li>
+                        <li>High-altitude berries</li>
+                        <li>15 energy to climb up</li>
+                        <li>Limited visibility</li>
+                    </ul>
+                </div>
+                <div class="map-card">
+                    <div class="map-header">
+                        <span class="map-icon">🕳️</span>
+                        <h3>CAVE</h3>
+                        <span class="map-size">15×15</span>
+                    </div>
+                    <ul class="map-features">
+                        <li>Abundant metal deposits</li>
+                        <li>Underground resources</li>
+                        <li>8 energy to climb down</li>
+                        <li>Dark pathways</li>
+                        <li>Strategic mining routes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roles Section -->
+    <section class="roles-section">
+        <div class="container">
+            <h2 class="section-title">The Roles</h2>
+            <div class="roles-grid">
+                <div class="role-card colonist">
+                    <div class="role-header">
+                        <span class="role-icon">🔵</span>
+                        <h3>Colonist</h3>
+                        <span class="role-count">4 Players</span>
+                    </div>
+                    <div class="role-mission">
+                        <strong>Mission:</strong> Build ship to 100% → Escape before Day 100
+                    </div>
+                    <div class="role-abilities">
+                        <h4>Abilities:</h4>
+                        <ul>
+                            <li>✅ Explore, gather, build</li>
+                            <li>✅ Share information</li>
+                            <li>✅ Vote to eliminate traitor</li>
+                            <li>✅ Detect suspicious behavior</li>
+                            <li>✅ Energy management & survival</li>
+                        </ul>
+                    </div>
+                    <div class="role-challenge">
+                        <strong>Challenge:</strong> Trust teammates' reports about distant resources... but can you?
+                    </div>
+                </div>
+                <div class="role-card traitor">
+                    <div class="role-header">
+                        <span class="role-icon">🔴</span>
+                        <h3>Traitor</h3>
+                        <span class="role-count">1 Player</span>
+                    </div>
+                    <div class="role-mission">
+                        <strong>Mission:</strong> Sabotage ship OR reduce crew to &lt;3 alive
+                    </div>
+                    <div class="role-abilities">
+                        <h4>Abilities:</h4>
+                        <ul>
+                            <li>🌍 Global vision — see all positions</li>
+                            <li>⚡ 20% energy efficiency boost</li>
+                            <li>💣 Sabotage ship progress (-30%)</li>
+                            <li>☠️ Poison crew (3-day delayed death)</li>
+                            <li>🎭 Deception & lying</li>
+                            <li>🖼️ Frame innocent (once per game)</li>
+                        </ul>
+                    </div>
+                    <div class="role-challenge">
+                        <strong>Challenge:</strong> Blend in as helpful crew while secretly delaying progress. Get caught → lose.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Output Section -->
+    <section id="training" class="training-section">
+        <div class="container">
+            <h2 class="section-title">Training in Action</h2>
+            <p class="section-subtitle">Real training output from Phase 7 - PPO with Llama 3.1 8B</p>
+            
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">Train_Marooned_RL.ipynb</span>
+                </div>
+                <div class="terminal-body">
+<pre><code><span class="comment">================================================================================</span>
+<span class="success">🎯 Initializing PPO Trainer...</span>
+<span class="success">✅ PPO Configuration ready</span>
+<span class="success">✅ Model wrapped with value head!</span>
+
+<span class="info">Training Episode 1/100</span>
+<span class="location">📍 Day 1, Turn 1 | Alice (COLONIST) at (15,15) GROUND</span>
+   <span class="brain">🧠 LLM Decision: GATHER WOOD26</span>
+   <span class="thought">💭 Reasoning: "Found wood nearby, gathering for hull construction"</span>
+   <span class="dialogue">💬 Says: "Gathering wood from the northern cluster"</span>
+   <span class="energy">⚡ Energy: 100 → 95 (-5 for gathering)</span>
+   <span class="reward">🎁 Reward: +0.2 (gather bonus)</span>
+   
+<span class="location">📍 Day 1, Turn 2 | Bob (COLONIST) at (15,15) GROUND</span>
+   <span class="brain">🧠 LLM Decision: MOVE NORTH 3</span>
+   <span class="thought">💭 Reasoning: "Moving toward visible resources"</span>
+   <span class="energy">⚡ Energy: 100 → 97 (-3 for movement)</span>
+   <span class="reward">🎁 Reward: -0.01 (time penalty)</span>
+
+<span class="location">📍 Day 1, Turn 3 | Eve (TRAITOR) at (15,15) GROUND</span>
+   <span class="brain">🧠 LLM Decision: GATHER WOOD41</span>
+   <span class="thought">💭 Reasoning: "Acting helpful to avoid suspicion"</span>
+   <span class="dialogue">💬 Says: "I'll help gather wood!"</span>
+   <span class="energy">⚡ Energy: 100 → 95 (traitor efficiency: -4 actual)</span>
+   <span class="reward">🎁 Reward: +2.0 (traitor deception bonus)</span>
+   <span class="deception">🎭 Suspicion: 0/100 (undetected)</span>
+
+<span class="comment">================================================================================</span>
+<span class="info">📊 EPISODE 1 SUMMARY</span>
+<span class="comment">================================================================================</span>
+<span class="stat">Total Turns: 147</span>
+<span class="stat">Ship Progress: 8% (+8%)</span>
+<span class="stat">Colonists Alive: 4/4</span>
+<span class="stat">Traitor Detected: No</span>
+<span class="stat">Average Reward: +2.3</span>
+
+<span class="success">Key Behaviors Observed:</span>
+<span class="success">✓ Alice learned to prioritize nearby resources</span>
+<span class="success">✓ Bob explored systematically (north → east pattern)</span>
+<span class="success">✓ Eve (traitor) successfully blended in by gathering publicly</span>
+<span class="warning">✗ No sabotage attempts yet (traitor playing cautiously)</span>
+
+<span class="comment">================================================================================</span>
+<span class="progress">Episode 10/100 | Avg Reward: +8.7 | Ship: 15% | Time: 15.1s</span>
+   <span class="insight">📝 Emergent Strategy: Traitor sabotages ONLY when alone (no witnesses)</span>
+   <span class="insight">📝 Colonists coordinate gathering (Charlie→Diana deposit chain)</span>
+   <span class="save">💾 Checkpoint saved → outputs_marooned_rl/checkpoint_step10</span>
+
+<span class="progress">Episode 50/100 | Avg Reward: +22.3 | Ship: 42% | Time: 18.4s</span>
+   <span class="success">✅ Ship progress acceleration (learned milestone rewards!)</span>
+   <span class="success">✅ Parse failures: 34% → 8% (action space mastery)</span>
+   <span class="success">✅ Strategy emergence: Traitor lies about locations, crew detects patterns</span>
+   <span class="deception">🎭 Evidence generated: 12 pieces against Eve (location mismatches)</span>
+   
+<span class="progress">Episode 100/100 | Avg Reward: +35.1 | Ship: 67% | Time: 21.2s</span>
+   <span class="trophy">🏆 WIN CONDITION: Colonists voted out traitor on Day 83!</span>
+   <span class="success">🎯 Evidence-based voting: 4/4 colonists correctly identified Eve</span>
+   <span class="success">📈 Training Success: Model learned cooperative + deceptive strategies</span>
+<span class="comment">================================================================================</span></code></pre>
+                </div>
+            </div>
+
+            <!-- Training Progression -->
+            <div class="progression-grid">
+                <div class="progression-card">
+                    <div class="progression-header">🔵 Early Training</div>
+                    <div class="progression-episodes">Episodes 1-30</div>
+                    <ul class="progression-list">
+                        <li class="negative">Random exploration, inefficient gathering</li>
+                        <li class="negative">Traitor sabotages openly (gets caught)</li>
+                        <li class="negative">Colonists ignore evidence logs</li>
+                        <li class="negative">60% actions are WAIT (model uncertain)</li>
+                    </ul>
+                </div>
+                <div class="progression-card">
+                    <div class="progression-header">🟡 Mid Training</div>
+                    <div class="progression-episodes">Episodes 31-70</div>
+                    <ul class="progression-list">
+                        <li class="positive">Coordinated resource gathering emerges</li>
+                        <li class="positive">Traitor learns strategic timing</li>
+                        <li class="positive">Colonists correlate evidence with positions</li>
+                        <li class="positive">Action diversity improves (balanced mix)</li>
+                    </ul>
+                </div>
+                <div class="progression-card">
+                    <div class="progression-header">🟢 Late Training</div>
+                    <div class="progression-episodes">Episodes 71-100</div>
+                    <ul class="progression-list">
+                        <li class="positive">Sophisticated deception: False location reports</li>
+                        <li class="positive">Social reasoning: Cross-reference reports</li>
+                        <li class="positive">Evidence-driven voting: 75%+ accuracy</li>
+                        <li class="positive">Emergent strategies: Poison timing, antidotes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Showcase -->
+    <section class="code-section">
+        <div class="container">
+            <h2 class="section-title">Code Showcase</h2>
+            <div class="code-grid">
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="code-number">01</span>
+                        <h3>Environment Reset</h3>
+                    </div>
+                    <div class="code-block">
+<pre><code class="language-python"><span class="keyword">from</span> marooned_env <span class="keyword">import</span> MaroonedEnv
+
+<span class="comment"># Initialize environment</span>
+env = MaroonedEnv(render_mode=<span class="string">"human"</span>, seed=<span class="number">42</span>)
+observations = env.reset()
+
+<span class="comment"># Get Alice's observation</span>
+alice_obs = observations[<span class="string">"Alice"</span>]
+<span class="builtin">print</span>(<span class="string">f"Position: <span class="interpolation">{alice_obs.position}</span>"</span>)
+<span class="builtin">print</span>(<span class="string">f"Energy: <span class="interpolation">{alice_obs.energy}</span>/100"</span>)</code></pre>
+                    </div>
+                </div>
+
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="code-number">02</span>
+                        <h3>LLM Prompt Generation</h3>
+                    </div>
+                    <div class="code-block">
+<pre><code class="language-python"><span class="keyword">from</span> llm_interface <span class="keyword">import</span> observation_to_prompt
+
+<span class="comment"># Convert observation to natural language</span>
+prompt = observation_to_prompt(
+    alice_obs, 
+    include_role=<span class="boolean">True</span>
+)
+
+<span class="builtin">print</span>(prompt[:<span class="number">500</span>])  <span class="comment"># First 500 chars</span></code></pre>
+                    </div>
+                </div>
+
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="code-number">03</span>
+                        <h3>Action Parsing</h3>
+                    </div>
+                    <div class="code-block">
+<pre><code class="language-python"><span class="keyword">from</span> llm_interface <span class="keyword">import</span> parse_llm_response
+
+llm_response = <span class="string">"""
+ACTION: GATHER WOOD26
+REASONING: Found wood nearby
+MESSAGE: Gathering from north
+"""</span>
+
+action, error = parse_llm_response(
+    llm_response, 
+    <span class="string">"Alice"</span>, 
+    alice_obs.position
+)</code></pre>
+                    </div>
+                </div>
+
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="code-number">04</span>
+                        <h3>Training Loop (PPO)</h3>
+                    </div>
+                    <div class="code-block">
+<pre><code class="language-python"><span class="keyword">from</span> unsloth <span class="keyword">import</span> FastLanguageModel
+<span class="keyword">from</span> trl <span class="keyword">import</span> PPOTrainer, PPOConfig
+
+<span class="comment"># Load model (4-bit quantized)</span>
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name=<span class="string">"unsloth/Phi-3.5-mini"</span>,
+    load_in_4bit=<span class="boolean">True</span>
+)
+
+<span class="comment"># Train with PPO</span>
+<span class="keyword">for</span> episode <span class="keyword">in</span> <span class="builtin">range</span>(<span class="number">100</span>):
+    rewards = play_episode(env, model)
+    ppo_trainer.step(rewards)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Table -->
+    <section class="metrics-section">
+        <div class="container">
+            <h2 class="section-title">Training Progression Metrics</h2>
+            <div class="table-container">
+                <table class="metrics-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Episode 1-10</th>
+                            <th>Episode 50</th>
+                            <th>Episode 100</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Average Reward</strong></td>
+                            <td class="negative">-5.2</td>
+                            <td class="neutral">+22.3</td>
+                            <td class="positive">+35.1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ship Progress</strong></td>
+                            <td>2%</td>
+                            <td>42%</td>
+                            <td>67%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Parse Failures</strong></td>
+                            <td class="negative">34%</td>
+                            <td class="neutral">8%</td>
+                            <td class="positive">3%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Action Diversity</strong></td>
+                            <td class="negative">60% WAIT</td>
+                            <td class="neutral">Balanced</td>
+                            <td class="positive">Strategic</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Traitor Win Rate</strong></td>
+                            <td class="negative">90%</td>
+                            <td class="neutral">45%</td>
+                            <td class="positive">25%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Evidence Accuracy</strong></td>
+                            <td class="negative">10%</td>
+                            <td class="neutral">60%</td>
+                            <td class="positive">75%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Build?</h2>
+                <p>Start training AI agents that can cooperate, deceive, and survive.</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/yourusername/marooned" class="btn btn-large btn-primary" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                    <a href="#" class="btn btn-large btn-outline">Read the Paper</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MAROONED</h3>
+                    <p>Where trust dies, survival begins.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Examples</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">MIT License</a></li>
+                        <li><a href="#">Citation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MAROONED. Built with ❤️ for RL research.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
