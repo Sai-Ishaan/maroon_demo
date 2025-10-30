@@ -486,6 +486,185 @@ model, tokenizer = FastLanguageModel.from_pretrained(
         </div>
     </section>
 
+    <!-- ===================================================================
+     INTERACTIVE SIMULATION SECTION - Among Us Style
+     =================================================================== -->
+<section class="simulation-section" id="simulation">
+    <div class="container-wide">
+        <div class="section-header">
+            <h2 class="section-title">Live Training Simulation</h2>
+            <p class="section-subtitle">Watch AI agents explore, deceive, and survive in real-time</p>
+        </div>
+
+        <div class="simulation-wrapper">
+            <!-- Left Panel: Game Grid -->
+            <div class="game-panel">
+                <!-- Level Selector -->
+                <div class="level-selector">
+                    <button class="level-btn active" data-level="ground">
+                        🏝️ GROUND <span class="level-size">30×30</span>
+                    </button>
+                    <button class="level-btn" data-level="mountain">
+                        ⛰️ MOUNTAIN <span class="level-size">10×10</span>
+                    </button>
+                    <button class="level-btn" data-level="cave">
+                        🕳️ CAVE <span class="level-size">15×15</span>
+                    </button>
+                </div>
+
+                <!-- Playback Controls -->
+                <div class="playback-controls">
+                    <button class="control-btn" id="play-pause">
+                        <svg class="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <svg class="icon-pause hidden" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                        </svg>
+                    </button>
+                    <button class="control-btn" id="restart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                            <path d="M21 3v5h-5"/>
+                        </svg>
+                    </button>
+                    <div class="speed-control">
+                        <label>Speed:</label>
+                        <button class="speed-btn active" data-speed="1">1x</button>
+                        <button class="speed-btn" data-speed="2">2x</button>
+                        <button class="speed-btn" data-speed="4">4x</button>
+                    </div>
+                    <div class="turn-indicator">
+                        <span id="day-counter">Day 1</span>
+                        <span class="separator">•</span>
+                        <span id="turn-counter">Turn 1</span>
+                    </div>
+                </div>
+
+                <!-- Game Grid -->
+                <div class="game-grid-container">
+                    <canvas id="game-canvas" width="800" height="800"></canvas>
+                    
+                    <!-- Agent Info Tooltips -->
+                    <div id="agent-tooltip" class="agent-tooltip hidden">
+                        <div class="tooltip-header">
+                            <span class="tooltip-name"></span>
+                            <span class="tooltip-role"></span>
+                        </div>
+                        <div class="tooltip-stats">
+                            <div class="stat">⚡ <span class="energy"></span></div>
+                            <div class="stat">❤️ <span class="health"></span></div>
+                            <div class="stat">📍 <span class="position"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ship Progress Bar -->
+                <div class="ship-progress">
+                    <div class="progress-label">
+                        <span>🚢 Ship Construction Progress</span>
+                        <span id="progress-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                        <div class="progress-milestone" style="left: 25%">
+                            <span class="milestone-marker">25%</span>
+                        </div>
+                        <div class="progress-milestone" style="left: 50%">
+                            <span class="milestone-marker">50%</span>
+                        </div>
+                        <div class="progress-milestone" style="left: 75%">
+                            <span class="milestone-marker">75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Messages & Agent Info -->
+            <div class="info-panel">
+                <!-- Active Agents -->
+                <div class="agents-list">
+                    <h3>Agents</h3>
+                    <div class="agent-cards">
+                        <div class="agent-card" data-agent="alice">
+                            <div class="agent-avatar alice-avatar"></div>
+                            <div class="agent-info">
+                                <div class="agent-name">Alice</div>
+                                <div class="agent-role colonist">Colonist</div>
+                                <div class="agent-status">
+                                    <span class="energy-bar"><span class="fill" style="width: 100%"></span></span>
+                                    <span class="energy-text">100/100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agent-card" data-agent="bob">
+                            <div class="agent-avatar bob-avatar"></div>
+                            <div class="agent-info">
+                                <div class="agent-name">Bob</div>
+                                <div class="agent-role colonist">Colonist</div>
+                                <div class="agent-status">
+                                    <span class="energy-bar"><span class="fill" style="width: 100%"></span></span>
+                                    <span class="energy-text">100/100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agent-card" data-agent="charlie">
+                            <div class="agent-avatar charlie-avatar"></div>
+                            <div class="agent-info">
+                                <div class="agent-name">Charlie</div>
+                                <div class="agent-role colonist">Colonist</div>
+                                <div class="agent-status">
+                                    <span class="energy-bar"><span class="fill" style="width: 100%"></span></span>
+                                    <span class="energy-text">100/100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agent-card" data-agent="diana">
+                            <div class="agent-avatar diana-avatar"></div>
+                            <div class="agent-info">
+                                <div class="agent-name">Diana</div>
+                                <div class="agent-role colonist">Colonist</div>
+                                <div class="agent-status">
+                                    <span class="energy-bar"><span class="fill" style="width: 100%"></span></span>
+                                    <span class="energy-text">100/100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agent-card" data-agent="eve">
+                            <div class="agent-avatar eve-avatar"></div>
+                            <div class="agent-info">
+                                <div class="agent-name">Eve</div>
+                                <div class="agent-role traitor">Traitor</div>
+                                <div class="agent-status">
+                                    <span class="energy-bar traitor-bar"><span class="fill" style="width: 100%"></span></span>
+                                    <span class="energy-text">100/100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Feed -->
+                <div class="message-feed">
+                    <div class="feed-header">
+                        <h3>📡 Training Log</h3>
+                        <button class="clear-btn" id="clear-messages">Clear</button>
+                    </div>
+                    <div class="messages-container" id="messages-container">
+                        <div class="message system">
+                            <div class="message-icon">🎮</div>
+                            <div class="message-content">
+                                <div class="message-header">System</div>
+                                <div class="message-text">Episode initialized. Press play to start simulation.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -493,7 +672,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
                 <h2>Ready to Build?</h2>
                 <p>Start training AI agents that can cooperate, deceive, and survive.</p>
                 <div class="cta-buttons">
-                    <a href="https://github.com/yourusername/marooned" class="btn btn-large btn-primary" target="_blank">
+                    <a href="https://github.com/atchudhansg/colony-collapse" class="btn btn-large btn-primary" target="_blank">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
@@ -544,5 +723,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     </footer>
 
     <script src="script.js"></script>
+    <script src="simulation.js"></script>
+
 </body>
 </html>

@@ -284,7 +284,7 @@ console.log(`
 %cWhere Trust Dies, Survival Begins%c
 
 Interested in the code? Check out:
-https://github.com/yourusername/marooned
+https://github.com/atchudhansg/colony-collapse
 
 Built with love for RL research 🧠
 `,
@@ -301,3 +301,8 @@ window.addEventListener('load', () => {
         console.log(`%c⚡ Page loaded in ${loadTime}ms`, 'color: #50fa7b; font-weight: bold;');
     }
 });
+
+// Load simulation script dynamically
+const simulationScript = document.createElement('script');
+simulationScript.src = 'simulation.js';
+document.head.appendChild(simulationScript);
